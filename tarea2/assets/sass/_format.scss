@@ -28,7 +28,7 @@ main {
 
 }
 
-.images {
+%images {
     height: 90%;
     position: relative;
     margin: auto;
@@ -104,7 +104,7 @@ main {
 
 #mipc,
 #mibici {
-    @extend .images;
+    @extend %images;
 }
 
 .container::after {
