@@ -1,0 +1,34 @@
+@import "colores";
+@import "mixins";
+@import "format";
+body {
+    font-family: $font-family;
+}
+
+footer,
+header {
+    background-color: $footer;
+}
+
+.menu {
+    background-color: $background-color;
+    border: solid 1px $border;
+}
+
+.container {
+    >div {
+        background-color: $background-color;
+        border: solid 1px $border;
+    }
+    >div:nth-child(1) {
+        background-color: $second-background-color;
+    }
+    >div:nth-child(4),
+    >div:nth-child(5),
+    >div:nth-child(6),
+    >div:nth-child(7) {
+        @include tablet {
+            background-color: $second-background-color;
+        }
+    }
+}
