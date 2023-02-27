@@ -1,0 +1,114 @@
+@import "mixins";
+
+
+html,
+body {
+    @include reset;
+}
+
+body {
+    height: 100%;
+}
+
+header,
+footer {
+    height: 80px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+%images {
+    height: 90%;
+    position: relative;
+    margin: auto;
+    object-fit: scale-down;
+}
+
+.container {
+    width: 100%;
+
+
+    >div {
+        box-sizing: border-box;
+        height: 100px;
+        width: 25%;
+        float: left;
+
+        @include tablet {
+            height: 150px;
+            width: 30%;
+        }
+
+        @include mobil {
+            height: 120px;
+            width: 50%;
+        }
+
+    }
+
+    >div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        height: 300px;
+        width: 50%;
+
+        >img {
+            height: 99%;
+            position: relative;
+            margin: auto;
+            object-fit: scale-down;
+        }
+
+        @include tablet {
+            height: 300px;
+            width: 70%;
+        }
+
+        @include mobil {
+            height: 300px;
+            width: 100%;
+        }
+
+    }
+
+    >div:nth-child(4),
+    >div:nth-child(5),
+    >div:nth-child(6),
+    >div:nth-child(7) {
+        display: flex;
+
+        @include tablet {
+            height: 120px;
+            width: 25%;
+        }
+
+        @include mobil {
+            height: 120px;
+            width: 50%;
+        }
+    }
+
+
+}
+
+#mipc,
+#mibici {
+    @extend %images;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
