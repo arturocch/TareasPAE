@@ -1,4 +1,5 @@
 const noticia = require('./../models/new')
+
 const controllerTareas = {
     ListaNoticias(req,res) {
     noticia.buscar()
