@@ -14,15 +14,17 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <p>Arturo Corona Chavez</p>
     </header>
     <main>
-        <label for="site-search">Search the new:</label>
-        
-        <input type="search" id="site-search" name="q">
+        <form action="/news" method="get">
+            <label for="site-search">Search the new:</label><br>
+            <input type="search" id="site-search" name="keyword">
 
-        <button>Search</button>
+            <button>Search</button>
+
+        </form>
 
         <section class="container">
             <div></div>

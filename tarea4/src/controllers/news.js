@@ -1,11 +1,14 @@
 const noticia = require('./../models/new')
 
 const controllerTareas = {
-    ListaNoticias(req,res) {
-    noticia.buscar()
-    .then(noticias =>{ res.send(tareas)})
-    .catch(error => { res.send("error")})
-}
+    ListaNoticias(req, res) {
+
+        let keyword = req.query.keyword
+        noticia.buscar(keyword)
+        console.log(keyword)
+        res.render('home')
+
+    }
 }
 
-module.exports =  controllerTareas
+module.exports = controllerTareas
