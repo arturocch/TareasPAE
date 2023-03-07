@@ -5,6 +5,7 @@ const controllerTareas = {
 
         let keyword = req.query.keyword
         if (keyword) {
+        
             noticia.buscar(keyword)
             .then(response => {
                 console.log(response.data.articles)
@@ -13,6 +14,7 @@ const controllerTareas = {
             .catch(error=> {
                 res.send('algo salio mal').status(400)
             })
+
         } else {
             res.render('home')
         }
