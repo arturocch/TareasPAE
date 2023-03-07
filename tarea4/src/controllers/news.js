@@ -5,9 +5,13 @@ const controllerTareas = {
 
         let keyword = req.query.keyword
         if (keyword) {
-            noticia.buscar(keyword)
+            let data = noticia.buscar(keyword)
             console.log(keyword)
-            res.render('news')
+            if (data) {
+                res.render('news', { data })
+            } else {
+                res.render('home')
+            }
         } else {
             res.render('home')
         }
