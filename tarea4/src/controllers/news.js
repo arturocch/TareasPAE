@@ -6,8 +6,13 @@ const controllerTareas = {
         let keyword = req.query.keyword
         if (keyword) {
             noticia.buscar(keyword)
-            console.log(keyword)
-            res.render('news')
+            .then(response => {
+                console.log(response.data.articles)
+                res.render('news', {noticias: response.data.articles})
+            })
+            .catch(error=> {
+                res.send('algo salio mal').status(400)
+            })
         } else {
             res.render('home')
         }

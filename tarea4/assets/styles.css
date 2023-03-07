@@ -38,3 +38,7 @@ main {
   display: table;
   clear: both;
 }
+
+.imgNews{
+    width: 50%;
+}
