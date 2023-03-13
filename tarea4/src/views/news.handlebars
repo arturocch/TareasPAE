@@ -1,0 +1,13 @@
+<ul>
+{{#each noticias}}
+    <div>
+        <hr>
+        <img class="imgNews" src={{this.urlToImage}} alt="imagen de la noticia"><br>
+        <h3 class="tittlesNews">{{this.title}}</h3><br>
+        <h5 class="authorsNews">{{this.author}}</h5>
+        <h5 class="descriptionNews">{{this.description}}</h5>
+        
+    </div>
+
+{{/each}}
+
