@@ -7,7 +7,7 @@ paso 1
 paso 2
 
 
-    crear archivo .env que contenga tu url a monogodb
+    crear archivo .env que contenga la cadena de texto entregada en comentarios
 
 
 paso 3 
@@ -19,4 +19,9 @@ paso 3
 paso 4 
 
 
-    probar con postman
+    dirigirse a http://localhost:3000/swagger/#/ para ver las rutas.
+
+
+paso 5
+
+    debido a que se logro hacer que los request funcionaran a traves de swagger para probar se recomienda usar postman.

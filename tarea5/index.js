@@ -1,6 +1,6 @@
-import express from 'express'
-import routes from './src/routes'
-import mongoose from 'mongoose'
+const express = require('express')
+const routes = require( './src/routes')
+const mongoose = require( 'mongoose')
 require('dotenv').config()
 
 const swaggerJsDoc = require('swagger-jsdoc')

@@ -6,22 +6,60 @@ const tareasController = {
             .then(response => {
                 //console.log(req)
                 console.log(response)
-                res.render('tareas', { tareas: response })
+                res.send(response)
             })
             .catch(error => {
                 res.status(400).send('algo salió mal')
             })
     },
+
     crearTarea: (req, res) => {
-        console.log(req.body)
-        res.send('tarea creada')
+        tarea.create(req.body)
+            .then(response =>{
+                console.log(response)
+                res.send(response)
+            })
+            .catch(error => {
+                res.status(400).send('algo salió mal')
+            })
+        
+        
     },
+
     actualizarTarea: (req, res) => {
-        res.send('tarea actualizada')
+        const id = req.params.id
+        const object = req.body
+        console.log(object)
+        tarea.findByIdAndUpdate(id, object)
+            .then(response =>{
+                res.send(response)
+            })
+            .catch(error => {
+                res.status(400).send('algo salió mal')
+            })
     },
+
     tareaEsp: (req, res) => {
         const id = req.params.id
-        res.send('tarea visualizada ' + id)
+        tarea.findById(id)
+            .then(response => {
+                console.log(response)
+                res.send(response)
+            })
+            .catch(error => {
+                console.log(error)
+                res.status(400).send('algo salió mal')
+            })
+    },
+    eliminarTarea: (req, res) => {
+        const id = req.params.id
+        tarea.findByIdAndRemove(id)
+            .then(response =>{
+                res.send(response)
+            })
+            .catch(error => {
+                res.status(400).send('algo salió mal')
+            })
     }
 }
 
