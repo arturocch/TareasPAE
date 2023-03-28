@@ -1,0 +1,29 @@
+Al nivel de esta carpeta se encuentra el archivo my-cv el cual es un proyecto en angular para desplegar uns spa que muestra los datos de mi cv.
+El alcance de la tarea se limita a disenar los componentes servicios e interfaces necesarios para mostrar la spa, sin embargo a pesar de que se use un esquema mvc con los servicios e interfaces se simula la respuesta de un api pero no se utiliza un api externo.
+
+pasos para iniciar la aplicacion
+
+paso 0: 
+
+
+        situar la terminal en la carpeta my-cv
+
+
+paso 1:
+
+
+        utilizar el comando "npm install"
+
+
+paso 2:
+
+
+       utilizar el comando "ng serve -o" este comando abrira directamente el navegdor
+
+
+
+paso 3: 
+
+
+        con el navegador abierto probar la funcionalidad de la single page aplication
+        
