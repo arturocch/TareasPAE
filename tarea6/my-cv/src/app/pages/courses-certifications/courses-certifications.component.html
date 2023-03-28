@@ -1,1 +1,19 @@
-<p>courses-certifications works!</p>
+<p>Sadly we have no courses or certifications</p>
+
+<div class="card" *ngFor="let item of info">
+    <div class="card-content">
+      <div class="card-image">
+        <img src="https://via.placeholder.com/150x150" alt="Imagen de la tarjeta">
+      </div>
+      <div class="card-text">
+        <h2 class="name">{{item.name}}</h2>
+        <p class="description">{{item.description}}</p>
+        <p class="link"><a href={{item.emitterLink}}>{{item.emitterLink}}</a></p>
+        <div class="meta">
+          <span class="date">{{item.date}}</span>
+          <span class="emitter">{{item.emitter}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
