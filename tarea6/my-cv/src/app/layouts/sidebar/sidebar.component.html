@@ -1,6 +1,7 @@
 
-<ul>
+<div class="menu"><ul class="lista-menu">
     <li *ngFor="let item of menu">
-        <a href={{item.path}}>{{item.content}}</a>
+        <a routerLink={{item.path}}>{{item.content}}</a>
     </li>
 </ul>
+</div>

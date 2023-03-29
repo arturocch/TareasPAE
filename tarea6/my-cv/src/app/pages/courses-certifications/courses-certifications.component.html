@@ -1,6 +1,8 @@
-<p>Sadly we have no courses or certifications</p>
+<div class="noCourse">
+  <p>Sadly we have no courses or certifications</p>
+</div>
 
-<div class="card" *ngFor="let item of info">
+<div class="card" *ngFor="let item of info | paginate: { itemsPerPage: count, currentPage: p }">
     <div class="card-content">
       <div class="card-image">
         <img src="https://via.placeholder.com/150x150" alt="Imagen de la tarjeta">
@@ -15,5 +17,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="paginator" class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
   

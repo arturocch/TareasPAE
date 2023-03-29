@@ -10,12 +10,18 @@ import { CourseCertificationService } from 'src/app/shared/services/coursesCerti
 })
 export class CoursesCertificationsComponent {
   info: Array<CourseCertification> = []
+  p:number = 1
+  count:number = 5
+  paginator:boolean = false
   constructor(private courseCertificationService  : CourseCertificationService ){
     this.getContactInfo()
   } 
   getContactInfo(){
     this.courseCertificationService.getCoursesCertifications().then((response:any)=>{
       this.info = response
+      if(this.info.length>5){
+        this.paginator = true
+      }
     })
   }
 }

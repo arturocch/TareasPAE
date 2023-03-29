@@ -22,7 +22,22 @@ export class CourseCertificationService {
           date: '28 diciembre 2023',
           emitter: 'escuela falsa',
           emitterLink:'ejemplo.com'
-        }]
+        },
+        {
+          name: 'fake curso 2',
+          description: 'fake description  esto es una descripcion falsa a la cual solo se le ha agregado texto para ocupar mas espacio dentro de la card y parezca mas real',
+          date: '28 diciembre 2023',
+          emitter: 'escuela falsa',
+          emitterLink:'ejemplo.com'
+        },
+        {
+          name: 'fake curso 2',
+          description: 'fake description  esto es una descripcion falsa a la cual solo se le ha agregado texto para ocupar mas espacio dentro de la card y parezca mas real',
+          date: '28 diciembre 2023',
+          emitter: 'escuela falsa',
+          emitterLink:'ejemplo.com'
+        }
+      ]
       )
     })
   }
