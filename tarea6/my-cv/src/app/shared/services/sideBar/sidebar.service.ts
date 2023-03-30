@@ -9,8 +9,8 @@ export class SidebarService {
 
   getSidebar(){
     return [{
-      path: '/',
-      content: 'Home'
+      path: '/home',
+      content: 'About me'
     },
     {
       path: '/contactinfo',
@@ -18,7 +18,7 @@ export class SidebarService {
     },
     {
       path: '/certifications',
-      content: 'Courses and certifications'
+      content: 'Work experience'
     },
     {
       path: '/projects',

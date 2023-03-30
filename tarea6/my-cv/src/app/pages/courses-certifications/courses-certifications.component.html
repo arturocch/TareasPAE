@@ -1,6 +1,3 @@
-<div class="noCourse">
-  <p>Sadly we have no courses or certifications</p>
-</div>
 
 <div class="card" *ngFor="let item of info | paginate: { itemsPerPage: count, currentPage: p }">
     <div class="card-content">
@@ -10,7 +7,7 @@
       <div class="card-text">
         <h2 class="name">{{item.name}}</h2>
         <p class="description">{{item.description}}</p>
-        <p class="link"><a href={{item.emitterLink}}>{{item.emitterLink}}</a></p>
+        <p class="link" *ngIf="item.emitterLink"><a href={{item.emitterLink}}>{{item.emitterLink}}</a></p>
         <div class="meta">
           <span class="date">{{item.date}}</span>
           <span class="emitter">{{item.emitter}}</span>
