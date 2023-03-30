@@ -1,0 +1,44 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+body {
+    height: 100%;
+}
+
+header,
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: brown;
+}
+
+header {
+    display: flex;
+    font-size: larger;
+    justify-content: center;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+.container {
+  width: 100%;
+}
+
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.imgNews{
+    width: 50%;
+}

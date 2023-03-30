@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    align-items: top;
+    gap: 16px;
+    padding: 16px;
+    background-color: lightblue;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: 90vh;
+    margin: 0 2px 0 0;
+}
+li{
+    text-align: left;
+    text-justify: auto;
+}
+a { 
+    
+    color: inherit;
+   }
