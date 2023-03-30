@@ -1,1 +1,25 @@
-<p>studies works!</p>
+
+
+<div class="card" *ngFor="let item of info | paginate: { itemsPerPage: count, currentPage: p }">
+    <a href={{item.emitterLink}} target="_blank" rel="noopener noreferrer"  >
+        <div class="card-content">
+      <div class="card-image">
+        <img src={{item.img}} alt="Imagen de la tarjeta">
+      </div>
+      <div class="card-text">
+        <h2 class="name">{{item.name}}</h2>
+        <p class="description">{{item.description}}</p>
+        
+        <div class="meta">
+          <span class="date">{{item.date}}</span>
+          <span class="emitter">{{item.emitter}}</span>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+
+  <div *ngIf="paginator" class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  

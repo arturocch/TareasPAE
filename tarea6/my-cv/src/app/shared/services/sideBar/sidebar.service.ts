@@ -17,7 +17,7 @@ export class SidebarService {
       content: 'Contact information'
     },
     {
-      path: '/certifications',
+      path: '/works',
       content: 'Work experience'
     },
     {

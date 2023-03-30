@@ -13,9 +13,9 @@ export class ProjectsComponent {
   count:number = 5
   paginator:boolean = false
   constructor(private projectService  : ProjectService ){
-    this.getContactInfo()
+    this.getProjects()
   } 
-  getContactInfo(){
+  getProjects(){
     this.projectService.getProjects().then((response:any)=>{
       this.info = response
       if(this.info.length>5){

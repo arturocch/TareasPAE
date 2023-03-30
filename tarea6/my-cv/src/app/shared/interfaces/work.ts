@@ -1,4 +1,4 @@
-export interface CourseCertification {
+export interface Work {
     img?: string,
     name?: string,
     description?: string,
